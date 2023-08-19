@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  align-items: center;
+}
+body {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-image: url("../public/fonts/background.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
