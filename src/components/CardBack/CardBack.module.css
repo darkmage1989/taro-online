@@ -1,0 +1,41 @@
+.cardBack {
+  width: 130px;
+  height: 230px;
+  padding-left: 335px;
+}
+
+.cardBackActive {
+  width: 130px;
+  height: 230px;
+  margin-left: 335px;
+	display: block;
+	cursor: pointer;
+	box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+	animation: pulse 2s infinite;
+}
+@-webkit-keyframes pulse {
+	0% {
+		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+	}
+	70% {
+		-webkit-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.342);
+	}
+	100% {
+		-webkit-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+	}
+}
+
+@keyframes pulse {
+	0% {
+		-moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+		box-shadow: 0 0 0 0 rgba(235, 232, 232, 0.4);
+	}
+	70% {
+		-moz-box-shadow: 0 0 0 20px rgba(255, 255, 255, 0.397);
+		box-shadow: 0 0 0 20px rgba(224, 213, 172, 0.301);
+	}
+	100% {
+		-moz-box-shadow: 0 0 0 0 rgba(204,169,44, 0.100);
+		box-shadow: 0 0 0 0 rgba(204, 169, 44, 0.100);
+	}
+}
