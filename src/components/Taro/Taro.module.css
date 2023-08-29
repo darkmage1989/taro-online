@@ -1,0 +1,12 @@
+.cardField {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 500px;
+    gap: 20px;
+  }
+  .cardImg {
+    width: 130px;
+    height: 230px;
+    cursor: pointer;
+  } 

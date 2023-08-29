@@ -1,0 +1,11 @@
+.footer {
+  background: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.534),
+    rgba(69, 12, 134, 0.384)
+  );
+  height: 80px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

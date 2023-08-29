@@ -1,13 +1,13 @@
 .cardBack {
   width: 130px;
   height: 230px;
-  padding-left: 335px;
+  margin-left: 185px;
 }
 
 .cardBackActive {
   width: 130px;
   height: 230px;
-  margin-left: 335px;
+  margin-left: 185px;
 	display: block;
 	cursor: pointer;
 	box-shadow: 0 0 0 rgba(204,169,44, 0.4);

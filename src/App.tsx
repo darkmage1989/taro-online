@@ -1,11 +1,16 @@
-
-import Card from './components/Card/Cards';
-import styles from './App.module.css'
+import Card from "./components/Card/Cards";
+import styles from "./App.module.css";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
-    <main className={styles.main}>
-    <Card/>
-    </main>
+    <>
+      <Header />
+      <main className={styles.main}>
+        <Card />
+      </main>
+      <Footer />
+    </>
   );
 }
 

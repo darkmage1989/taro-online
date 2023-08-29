@@ -1,11 +1,17 @@
-.main {
-  display: flex;
-  align-items: center;
-}
+html,
 body {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0;
+  padding: 0;
   background-image: url("../public/fonts/background.jpg");
   background-repeat: no-repeat;
-  background-size: auto;
+  -ms-overflow-style: none;
+  background-position: center;
+  background-size: cover;
+  scrollbar-width: none;
+  height: 100%;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
