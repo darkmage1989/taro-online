@@ -1,6 +1,6 @@
 import styles from "./ButtonsBox.module.css";
 interface ButtonsBoxProps {
-  setAmount: any;
+  setAmount: (i: number) => void;
   amount: Number;
 }
 

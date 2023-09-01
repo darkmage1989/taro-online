@@ -1,14 +1,15 @@
+import React, { useEffect } from "react";
 import Description from "../Description/Description";
 import styles from "./CardData.module.css";
+import Typed from "typed.js";
 
 interface CardDataProps {
   data: Array<data>;
   card: number;
-  toggleVisibleFilter: any;
+  toggleVisibleFilter: (i: string) => void;
   visible: string;
- 
 }
-interface data {
+export interface data {
   title: string;
   description: string;
   main: string;
@@ -16,14 +17,38 @@ interface data {
   maind: string;
   relationships: string;
   love: string;
+  id: number;
+  url: string;
 }
-
 const CardData = ({
   data,
   card,
   toggleVisibleFilter,
   visible,
 }: CardDataProps) => {
+  const refs = React.useRef(null);
+  useEffect(() => {
+    if (refs.current && visible) {
+      if (
+        visible !== "main" &&
+        visible !== "work" &&
+        visible !== "maind" &&
+        visible !== "relationships" &&
+        visible !== "love"
+      ) {
+        return;
+      }
+      const typed = new Typed(refs.current, {
+        strings: [data[card][visible]],
+        typeSpeed: 40,
+        cursorChar: "",
+      });
+      return () => {
+        typed.destroy();
+      };
+    }
+  }, [visible, data, card]);
+  console.log(refs.current);
   return (
     <div className={styles.dataCardBox}>
       <h2>{card !== 78 ? data[card].title : "Как это работает"}</h2>
@@ -44,9 +69,7 @@ const CardData = ({
           Общее описание Аркана {data[card].title}
         </span>
       )}
-      {visible === "main" && (
-        <p className={styles.dataText}> {data[card].main}</p>
-      )}
+      {visible === "main" && <p ref={refs} className={styles.dataText}></p>}
       {card !== 78 && (
         <span
           className={
@@ -57,9 +80,7 @@ const CardData = ({
           В работе
         </span>
       )}
-      {visible === "work" && (
-        <p className={styles.dataText}>{data[card].work}</p>
-      )}
+      {visible === "work" && <p ref={refs} className={styles.dataText}></p>}
       {card !== 78 && (
         <span
           className={
@@ -70,9 +91,7 @@ const CardData = ({
           Сознание
         </span>
       )}
-      {visible === "maind" && (
-        <p className={styles.dataText}>{data[card].maind}</p>
-      )}
+      {visible === "maind" && <p ref={refs} className={styles.dataText}></p>}
       {card !== 78 && (
         <span
           className={
@@ -86,7 +105,7 @@ const CardData = ({
         </span>
       )}
       {visible === "relationships" && (
-        <p className={styles.dataText}>{data[card].relationships}</p>
+        <p ref={refs} className={styles.dataText}></p>
       )}
       {card !== 78 && (
         <span
@@ -98,9 +117,7 @@ const CardData = ({
           В любовных отношениях
         </span>
       )}
-      {visible === "love" && (
-        <p className={styles.dataText}>{data[card].love}</p>
-      )}
+      {visible === "love" && <p ref={refs} className={styles.dataText}></p>}
     </div>
   );
 };

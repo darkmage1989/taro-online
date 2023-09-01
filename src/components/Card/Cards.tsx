@@ -5,6 +5,7 @@ import CardBack from "../CardBack/CardBack";
 import ButtonsBox from "../ButtonsBox/ButtonsBox";
 import Taro from "../Taro/Taro";
 import CardData from "../CardData/CardData";
+import { type data } from "../CardData/CardData";
 function reducer(
   state: { field: Array<object> },
   action: { payload: object; type: string }
@@ -28,7 +29,7 @@ const Cards = () => {
   const [state, dispatch] = useReducer(reducer, {
     field: [],
   });
-  const field: any = state.field;
+  const field = state.field as Array<data>;
   const toggleVisibleFilter = (dropdown: string) => {
     setVisible(visible === dropdown ? "" : dropdown);
   };

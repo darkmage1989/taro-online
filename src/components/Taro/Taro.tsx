@@ -1,14 +1,15 @@
 import styles from "./Taro.module.css";
+import { type data } from "../CardData/CardData";
 interface TaroProps {
-  field: Array<Object>;
+  field: Array<data>;
   card: Number;
-  setCard: any
+  setCard: (i: number) => void;
 }
 
 const Taro = ({ field, card, setCard }: TaroProps) => {
   return (
     <div className={styles.cardField}>
-      {field.map((taro: any) => (
+      {field.map((taro) => (
         <img
           key={taro.id}
           onClick={() => {

@@ -1,6 +1,6 @@
 import styles from "./CardBack.module.css";
 interface CardBackProps {
-  cardRandomize: any;
+  cardRandomize: ()=> void;
   field: Array<Object>;
   amount: Number;
 }
