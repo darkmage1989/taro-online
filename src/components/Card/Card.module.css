@@ -1,7 +1,18 @@
+@media (max-width: 767px){
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cardBox {
+    align-items: center;
+  }
+
+}
 .cardBox {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 }
 .container {
   display: flex;
@@ -10,12 +21,13 @@
   padding-top: 20px;
 }
 .dataBox {
-  width: 800px;
+  max-width: 700px;
   color: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  padding-bottom: 20px;
 }
 
 .button {

@@ -2,16 +2,21 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background-image: url("../public/fonts/background.jpg");
-  background-repeat: no-repeat;
+  background: url("../public/fonts/background.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
   -ms-overflow-style: none;
-  background-position: center;
-  background-size: cover;
   scrollbar-width: none;
-  height: 100%;
+  height: 100vh;
 }
 body::-webkit-scrollbar {
   display: none;
 }
-
+.main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
 

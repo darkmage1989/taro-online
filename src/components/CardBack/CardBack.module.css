@@ -1,13 +1,21 @@
+@media (max-width: 767px){
+	.cardBack {
+		max-width: 80px;
+		max-height: 140px;
+	}
+	.cardBackActive {
+		max-width: 80px;
+		max-height: 140px;
+	}
+	}
 .cardBack {
   width: 130px;
   height: 230px;
-  margin-left: 185px;
 }
 
 .cardBackActive {
   width: 130px;
   height: 230px;
-  margin-left: 185px;
 	display: block;
 	cursor: pointer;
 	box-shadow: 0 0 0 rgba(204,169,44, 0.4);

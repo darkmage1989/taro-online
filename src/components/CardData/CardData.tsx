@@ -48,12 +48,12 @@ const CardData = ({
       };
     }
   }, [visible, data, card]);
-  console.log(refs.current);
   return (
     <div className={styles.dataCardBox}>
       <h2>{card !== 78 ? data[card].title : "Как это работает"}</h2>
       {card !== 78 ? (
-        data[card].description
+        <p ref={refs} className={styles.dataText}>{data[card].description}</p>
+        
       ) : (
         <div>
           <Description />

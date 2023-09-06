@@ -1,7 +1,14 @@
+@media (max-width: 767px){
+ .buttonsBox {
+  flex-wrap: wrap;
+  justify-content: space-around;
+ }
+}
 .buttonsBox {
   display: flex;
   gap: 10px;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-bottom: 20px;
 }
 .button {
   background-color: transparent;

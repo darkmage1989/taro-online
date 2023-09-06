@@ -1,0 +1,10 @@
+@media (max-width: 767px){
+    .dataText {
+      max-width: 320px;
+      min-width: 320px;
+      padding-right: 10px;
+    }
+    }
+.dataText{
+    text-align: center;
+}
