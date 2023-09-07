@@ -12,8 +12,8 @@ const CardBack = ({ cardRandomize, field, amount }: CardBackProps) => {
       className={
         field.length === amount ? styles.cardBack : styles.cardBackActive
       }
-      src={`/fonts/78.jpg`}
-      alt={`/fonts/78.jpg`}
+      src={`fonts/78.jpg`}
+      alt={`fonts/78.jpg`}
     />
   );
 };

@@ -16,8 +16,8 @@ const Taro = ({ field, card, setCard }: TaroProps) => {
             setCard(field.indexOf(taro));
           }}
           className={styles.cardImg}
-          src={`/fonts/${taro.url}.jpg`}
-          alt={`/fonts/${card}.jpg`}
+          src={`fonts/${taro.url}.jpg`}
+          alt={`fonts/${card}.jpg`}
         />
       ))}
     </div>

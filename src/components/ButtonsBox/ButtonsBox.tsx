@@ -11,6 +11,7 @@ const ButtonsBox = ({ setAmount, amount }: ButtonsBoxProps) => {
         className={amount === 1 ? styles.buttonActive : styles.button}
         onClick={() => {
           setAmount(1);
+          
         }}
       >
         Расклад дня (1 карта)

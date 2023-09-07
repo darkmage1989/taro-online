@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useEffect, useReducer, useRef, useState } from "react";
 import styles from "./Card.module.css";
 import { DATA } from "../../constans/DATA";
 import CardBack from "../CardBack/CardBack";
@@ -29,6 +29,7 @@ const Cards = () => {
   const [state, dispatch] = useReducer(reducer, {
     field: [],
   });
+  const fieldRef = useRef<HTMLInputElement>(null)
   const field = state.field as Array<data>;
   const toggleVisibleFilter = (dropdown: string) => {
     setVisible(visible === dropdown ? "" : dropdown);
@@ -41,8 +42,13 @@ const Cards = () => {
       setCard(field.length);
     }
   }
+  useEffect(() => {
+    if (fieldRef.current && amount !== 0) {
+      fieldRef.current.scrollIntoView({ block: "start", behavior: "smooth" });
+    }
+  }, [amount]);
   return (
-    <div className={styles.container}>
+    <div ref={fieldRef} className={styles.container}>
       <div className={styles.cardBox}>
         <CardBack cardRandomize={cardRandomize} field={field} amount={amount} />
         <Taro field={field} card={card} setCard={setCard} />
